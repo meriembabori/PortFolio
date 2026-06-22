@@ -21,7 +21,7 @@ export const owner = {
   location: "Casablanca, Morocco",
   email: "baborimeriem@gmail.com",
   phone: "+212 722 457682",
-  photoUrl: "",
+  photoUrl: "/ggg.png",
   photoAlt: "Meriem Babori profile photo",
   linkedin: "meriem-babori",
   linkedinUrl: "https://www.linkedin.com/in/meriem-babori",
