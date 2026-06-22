@@ -64,20 +64,28 @@ export default function Home() {
           <Reveal delay={0.1} className="grid gap-4 self-start">
             <div className="organic-panel border border-[#E7C2D0]/35 bg-[#182235]/78 p-5">
               <p className="mb-3 text-xs uppercase tracking-[0.24em] text-[#E7C2D0]/90">Profile</p>
-              <div className="relative mx-auto flex h-40 w-40 items-center justify-center overflow-hidden rounded-[2rem] border border-white/20 bg-gradient-to-br from-[#C06C84]/35 via-[#8F9CCF]/25 to-[#7DB7E8]/28 shadow-[0_18px_40px_rgba(192,108,132,0.24)]">
-                {owner.photoUrl ? (
-                  <Image
-                    src={owner.photoUrl}
-                    alt={owner.photoAlt}
-                    fill
-                    className="object-cover"
-                    sizes="160px"
-                  />
-                ) : (
-                  <span className="text-4xl font-semibold tracking-wider text-[#F3F6FC]">{initials}</span>
-                )}
+              <div className="relative mx-auto mt-1 w-fit">
+                <span className="pointer-events-none absolute -inset-4 -z-10 rounded-[2.4rem] bg-[radial-gradient(circle,rgba(192,108,132,0.3)_0%,rgba(125,183,232,0.12)_45%,transparent_70%)] blur-xl" />
+                <div className="relative flex h-44 w-44 items-center justify-center overflow-hidden rounded-[2.1rem] border border-white/25 bg-gradient-to-br from-[#C06C84]/35 via-[#8F9CCF]/25 to-[#7DB7E8]/28 p-1.5 shadow-[0_20px_45px_rgba(15,23,42,0.55),0_10px_24px_rgba(192,108,132,0.25)]">
+                  <div className="relative h-full w-full overflow-hidden rounded-[1.6rem] border border-white/20 bg-[#0F172A]">
+                    {owner.photoUrl ? (
+                      <Image
+                        src={owner.photoUrl}
+                        alt={owner.photoAlt}
+                        fill
+                        className="object-cover object-center"
+                        sizes="176px"
+                      />
+                    ) : (
+                      <span className="grid h-full place-items-center text-4xl font-semibold tracking-wider text-[#F3F6FC]">{initials}</span>
+                    )}
+                    <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/35 to-transparent" />
+                  </div>
+                </div>
+                <div className="mx-auto mt-3 w-fit rounded-full border border-white/20 bg-[#0F172A]/85 px-3 py-1 text-[0.68rem] uppercase tracking-[0.2em] text-slate-200">
+                  {owner.name}
+                </div>
               </div>
-              <p className="mt-3 text-center text-xs text-slate-400">Add your image in data to replace this placeholder.</p>
             </div>
 
             <div className="geo-visual organic-panel border border-[#8F9CCF]/40 p-5">
